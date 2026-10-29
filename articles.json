@@ -1,0 +1,390 @@
+[
+  {
+    "titre": "Wildfire risk for species under climate change",
+    "auteurs": "Yang, Urban, Su et al.",
+    "revue": "Nature Climate Change",
+    "annee": 2026,
+    "doi": "10.1038/s41558-026-02600-5",
+    "url": "https://www.nature.com/articles/s41558-026-02600-5",
+    "taxon": [
+      "Vertébrés",
+      "Plantes",
+      "Invertébrés"
+    ],
+    "zone": [
+      "Amérique du Sud",
+      "Monde"
+    ],
+    "themes": [
+      "Changement climatique",
+      "Feux / destruction d'habitats",
+      "Activités humaines"
+    ],
+    "pression": "Changement climatique",
+    "focus": "Changement climatique",
+    "resume": "La fréquence et l'intensité accrues des feux exposeraient 9 592 espèces non marines menacées à un risque croissant. Sous le scénario SSP2-4.5, la superficie brûlée mondiale augmenterait de 9,3 % et près de 84 % des espèces vulnérables aux feux verraient leur exposition s'accroître.",
+    "publication_date": "2026-01-01",
+    "cited_by_count": 0,
+    "open_access": false,
+    "openalex_id": ""
+  },
+  {
+    "titre": "Biodiversity implications of land-intensive carbon dioxide removal",
+    "auteurs": "Prütz et al.",
+    "revue": "Nature Climate Change",
+    "annee": 2026,
+    "doi": "10.1038/s41558-026-02557-5",
+    "url": "https://www.nature.com/articles/s41558-026-02557-5",
+    "taxon": [
+      "Plantes",
+      "Invertébrés",
+      "Vertébrés",
+      "Champignons"
+    ],
+    "zone": [
+      "Monde",
+      "Pays à revenu faible et intermédiaire"
+    ],
+    "themes": [
+      "Changement climatique",
+      "Fragmentation / destruction des habitats",
+      "Activités humaines"
+    ],
+    "pression": "Changement climatique",
+    "focus": "Changement climatique",
+    "resume": "Les trajectoires de mitigation fondées sur la forestation et les bioénergies avec captage du carbone peuvent empiéter jusqu'à 13 % des zones terrestres de forte importance pour la biodiversité.",
+    "publication_date": "2026-01-01",
+    "cited_by_count": 0,
+    "open_access": false,
+    "openalex_id": ""
+  },
+  {
+    "titre": "Frugivores enhance potential carbon recovery in fragmented landscapes",
+    "auteurs": "Bello, Crowther, Ramos et al.",
+    "revue": "Nature Climate Change",
+    "annee": 2024,
+    "doi": "10.1038/s41558-024-01989-1",
+    "url": "https://www.nature.com/articles/s41558-024-01989-1",
+    "taxon": [
+      "Oiseaux",
+      "Plantes"
+    ],
+    "zone": [
+      "Amérique du Sud",
+      "Brésil"
+    ],
+    "themes": [
+      "Fragmentation / destruction des habitats",
+      "Restauration écologique",
+      "Activités humaines"
+    ],
+    "pression": "Fragmentation / destruction des habitats",
+    "focus": "Fragmentation et destruction des habitats",
+    "resume": "Dans la forêt atlantique brésilienne, la fragmentation limite les déplacements des grands oiseaux frugivores et réduit jusqu'à 38 % le potentiel de reconstitution de biomasse.",
+    "publication_date": "2024-01-01",
+    "cited_by_count": 0,
+    "open_access": false,
+    "openalex_id": ""
+  },
+  {
+    "titre": "Deforestation poses deleterious effects to tree-climbing species under climate change",
+    "auteurs": "Zlotnick, Musselman, Levy",
+    "revue": "Nature Climate Change",
+    "annee": 2024,
+    "doi": "10.1038/s41558-024-01939-x",
+    "url": "https://www.nature.com/articles/s41558-024-01939-x",
+    "taxon": [
+      "Reptiles"
+    ],
+    "zone": [
+      "Monde",
+      "Zones arides"
+    ],
+    "themes": [
+      "Fragmentation / destruction des habitats",
+      "Changement climatique"
+    ],
+    "pression": "Fragmentation / destruction des habitats",
+    "focus": "Fragmentation et destruction des habitats",
+    "resume": "La perte d'arbres réduit les microhabitats thermorégulateurs de lézards semi-arboricoles ; pour 66 % des populations simulées, la déforestation inverse les effets positifs du réchauffement.",
+    "publication_date": "2024-01-01",
+    "cited_by_count": 0,
+    "open_access": false,
+    "openalex_id": ""
+  },
+  {
+    "titre": "Climate change will exacerbate land conflict between agriculture and timber production",
+    "auteurs": "Bousfield, Morton, Edwards",
+    "revue": "Nature Climate Change",
+    "annee": 2024,
+    "doi": "10.1038/s41558-024-02113-z",
+    "url": "https://www.nature.com/articles/s41558-024-02113-z",
+    "taxon": [
+      "Plantes",
+      "Vertébrés"
+    ],
+    "zone": [
+      "Monde",
+      "Forêts boréales",
+      "Tropiques"
+    ],
+    "themes": [
+      "Changement climatique",
+      "Fragmentation / destruction des habitats",
+      "Activités humaines"
+    ],
+    "pression": "Impact des activités humaines",
+    "focus": "Impact des activités humaines",
+    "resume": "Le déplacement des aptitudes agricoles pourrait rendre 240 à 320 millions d'hectares de terres forestières plus favorables à l'agriculture d'ici 2100.",
+    "publication_date": "2024-01-01",
+    "cited_by_count": 0,
+    "open_access": false,
+    "openalex_id": ""
+  },
+  {
+    "titre": "Corridors increase ant diversity over time",
+    "auteurs": "Burt et al.",
+    "revue": "Ecology",
+    "annee": 2026,
+    "doi": "10.1002/ecy.70527",
+    "url": "https://esajournals.onlinelibrary.wiley.com/doi/10.1002/ecy.70527",
+    "taxon": [
+      "Invertébrés",
+      "Fourmis"
+    ],
+    "zone": [
+      "Monde"
+    ],
+    "themes": [
+      "Fragmentation / destruction des habitats",
+      "Connectivité / corridors",
+      "Restauration écologique"
+    ],
+    "pression": "Fragmentation / destruction des habitats",
+    "focus": "Fragmentation et destruction des habitats",
+    "resume": "Les corridors écologiques augmentent la diversité des fourmis au fil du temps dans les paysages fragmentés.",
+    "publication_date": "2026-01-01",
+    "cited_by_count": 0,
+    "open_access": false,
+    "openalex_id": ""
+  },
+  {
+    "titre": "A 2100-km jaguar journey redefines mobility and large-scale connectivity",
+    "auteurs": "Morant et al.",
+    "revue": "Ecology",
+    "annee": 2026,
+    "doi": "10.1002/ecy.70441",
+    "url": "https://esajournals.onlinelibrary.wiley.com/doi/pdf/10.1002/ecy.70441",
+    "taxon": [
+      "Mammifères",
+      "Jaguar"
+    ],
+    "zone": [
+      "Amérique du Sud",
+      "Néotropique"
+    ],
+    "themes": [
+      "Fragmentation / destruction des habitats",
+      "Connectivité / corridors",
+      "Activités humaines"
+    ],
+    "pression": "Fragmentation / destruction des habitats",
+    "focus": "Fragmentation et destruction des habitats",
+    "resume": "Le suivi d'un jaguar sur 2 100 km met en évidence l'importance de grands corridors transfrontaliers dans les Néotropiques.",
+    "publication_date": "2026-01-01",
+    "cited_by_count": 0,
+    "open_access": false,
+    "openalex_id": ""
+  },
+  {
+    "titre": "Monitoring animal movement diversity as a component of conservation",
+    "auteurs": "—",
+    "revue": "Frontiers in Ecology and the Environment",
+    "annee": 2026,
+    "doi": "10.1002/fee.70038",
+    "url": "https://esajournals.onlinelibrary.wiley.com/doi/10.1002/fee.70038",
+    "taxon": [
+      "Vertébrés",
+      "Mammifères",
+      "Oiseaux"
+    ],
+    "zone": [
+      "Monde"
+    ],
+    "themes": [
+      "Fragmentation / destruction des habitats",
+      "Connectivité / corridors",
+      "Activités humaines"
+    ],
+    "pression": "Fragmentation / destruction des habitats",
+    "focus": "Fragmentation et destruction des habitats",
+    "resume": "La diversité des déplacements animaux peut servir d'indicateur de conservation face à la fragmentation des paysages.",
+    "publication_date": "2026-01-01",
+    "cited_by_count": 0,
+    "open_access": false,
+    "openalex_id": ""
+  },
+  {
+    "titre": "Habitat heterogeneity and anthropogenic disturbance jointly shape carnivore spatial associations",
+    "auteurs": "—",
+    "revue": "Ecological Monographs",
+    "annee": 2026,
+    "doi": "10.1002/ecm.70059",
+    "url": "https://esajournals.onlinelibrary.wiley.com/doi/10.1002/ecm.70059",
+    "taxon": [
+      "Mammifères",
+      "Carnivores"
+    ],
+    "zone": [
+      "Monde"
+    ],
+    "themes": [
+      "Fragmentation / destruction des habitats",
+      "Activités humaines"
+    ],
+    "pression": "Impact des activités humaines",
+    "focus": "Impact des activités humaines",
+    "resume": "L'hétérogénéité de l'habitat et les perturbations anthropiques influencent les associations spatiales entre carnivores.",
+    "publication_date": "2026-01-01",
+    "cited_by_count": 0,
+    "open_access": false,
+    "openalex_id": ""
+  },
+  {
+    "titre": "Sublethal pesticide exposure facilitates the potential spread of invasive species",
+    "auteurs": "—",
+    "revue": "Journal of Applied Ecology",
+    "annee": 2026,
+    "doi": "10.1111/1365-2664.70460",
+    "url": "https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2664.70460",
+    "taxon": [
+      "Invertébrés",
+      "Insectes"
+    ],
+    "zone": [
+      "Monde",
+      "Zones agricoles"
+    ],
+    "themes": [
+      "Pesticides / pollutions",
+      "Espèces invasives",
+      "Agriculture"
+    ],
+    "pression": "Pollutions dont pesticides",
+    "focus": "Pollutions dont pesticides",
+    "resume": "Une exposition sublétale aux pesticides peut faciliter l'expansion potentielle d'espèces invasives.",
+    "publication_date": "2026-01-01",
+    "cited_by_count": 0,
+    "open_access": false,
+    "openalex_id": ""
+  },
+  {
+    "titre": "Turning the tide on invasives: a global meta-analysis of native revegetation",
+    "auteurs": "—",
+    "revue": "Journal of Applied Ecology",
+    "annee": 2026,
+    "doi": "10.1111/1365-2664.70451",
+    "url": "https://besjournals.onlinelibrary.wiley.com/doi/toc/10.1111/(ISSN)1365-2664.reviews",
+    "taxon": [
+      "Plantes"
+    ],
+    "zone": [
+      "Monde"
+    ],
+    "themes": [
+      "Espèces invasives",
+      "Restauration écologique",
+      "Activités humaines"
+    ],
+    "pression": "Espèces invasives",
+    "focus": "Espèces invasives",
+    "resume": "Méta-analyse mondiale sur la restauration de végétation native pour limiter les espèces invasives.",
+    "publication_date": "2026-01-01",
+    "cited_by_count": 0,
+    "open_access": false,
+    "openalex_id": ""
+  },
+  {
+    "titre": "Management of invasive alien plants in forests: a global synthesis",
+    "auteurs": "—",
+    "revue": "Journal of Applied Ecology",
+    "annee": 2026,
+    "doi": "10.1111/1365-2664.70451",
+    "url": "https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2664.70451",
+    "taxon": [
+      "Plantes"
+    ],
+    "zone": [
+      "Monde",
+      "Forêts"
+    ],
+    "themes": [
+      "Espèces invasives",
+      "Gestion / conservation",
+      "Activités humaines"
+    ],
+    "pression": "Espèces invasives",
+    "focus": "Espèces invasives",
+    "resume": "Synthèse mondiale sur la gestion des plantes exotiques envahissantes en milieu forestier.",
+    "publication_date": "2026-01-01",
+    "cited_by_count": 0,
+    "open_access": false,
+    "openalex_id": ""
+  },
+  {
+    "titre": "Landscape diversity slows the spread of an invasive forest pest species",
+    "auteurs": "Lampert",
+    "revue": "Journal of Applied Ecology",
+    "annee": 2026,
+    "doi": "10.1111/1365-2664.70312",
+    "url": "https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/1365-2664.70312",
+    "taxon": [
+      "Invertébrés",
+      "Insectes forestiers"
+    ],
+    "zone": [
+      "Monde",
+      "Forêts"
+    ],
+    "themes": [
+      "Espèces invasives",
+      "Fragmentation / destruction des habitats",
+      "Sylviculture"
+    ],
+    "pression": "Espèces invasives",
+    "focus": "Espèces invasives",
+    "resume": "La diversité du paysage peut ralentir la propagation d'un ravageur forestier invasif.",
+    "publication_date": "2026-01-01",
+    "cited_by_count": 0,
+    "open_access": false,
+    "openalex_id": ""
+  },
+  {
+    "titre": "Habitat heterogeneity reduces abundance of invasive mealybugs in subtropical systems",
+    "auteurs": "de L Etienne et al.",
+    "revue": "Journal of Applied Ecology",
+    "annee": 2026,
+    "doi": "10.1111/1365-2664.70280",
+    "url": "https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/1365-2664.70280",
+    "taxon": [
+      "Invertébrés",
+      "Insectes"
+    ],
+    "zone": [
+      "Asie",
+      "Sous-tropiques"
+    ],
+    "themes": [
+      "Espèces invasives",
+      "Fragmentation / destruction des habitats",
+      "Agriculture"
+    ],
+    "pression": "Espèces invasives",
+    "focus": "Espèces invasives",
+    "resume": "L'hétérogénéité des habitats réduit l'abondance de cochenilles invasives en milieu subtropical.",
+    "publication_date": "2026-01-01",
+    "cited_by_count": 0,
+    "open_access": false,
+    "openalex_id": ""
+  }
+]
