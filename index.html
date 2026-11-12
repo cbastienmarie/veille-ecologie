@@ -1,73 +1,34 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tableau de bord — Veille écologie & biodiversité</title>
-<style>
-:root{--bg:#0f172a;--panel:#111c31;--panel2:#16233c;--txt:#e8eef8;--muted:#9fb0c8;--blue:#60a5fa}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--txt)}
-header{padding:24px 28px;background:linear-gradient(120deg,#0b1220,#132441);border-bottom:1px solid #22314f}
-h1{margin:0;font-size:22px}.sub{margin:6px 0 0;color:var(--muted);font-size:14px}
-.layout{display:grid;grid-template-columns:290px 1fr;gap:18px;padding:18px;max-width:1500px;margin:auto}
-.filters{background:var(--panel);border:1px solid #22314f;border-radius:14px;padding:16px;height:fit-content;position:sticky;top:12px}
-.filters h3{margin:14px 0 8px;font-size:13px;text-transform:uppercase;color:var(--muted)}
-select,input{width:100%;background:var(--panel2);color:var(--txt);border:1px solid #2c3d5e;border-radius:9px;padding:9px}
-label.chk{display:flex;gap:8px;font-size:13.5px;margin:5px 0}
-button{background:#1d4ed8;color:#fff;border:0;border-radius:9px;padding:9px 12px;font-weight:600;width:100%;margin-top:14px;cursor:pointer}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
-.kpi{background:var(--panel);border:1px solid #22314f;border-radius:14px;padding:14px}.kpi b{display:block;font-size:26px}.kpi span{color:var(--muted);font-size:12.5px}
-.charts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
-.card{background:var(--panel);border:1px solid #22314f;border-radius:14px;padding:16px}.card h2{font-size:15px;margin:0 0 10px}
-canvas{width:100%;height:230px;display:block}
-.results{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
-.article{background:var(--panel);border:1px solid #22314f;border-left:4px solid var(--blue);border-radius:12px;padding:14px}
-.article h4{margin:0 0 6px;font-size:15px}.meta{color:var(--muted);font-size:12.5px;margin-bottom:8px}
-.resume{font-size:13.5px;line-height:1.5}.tags{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
-.tag{font-size:11px;padding:3px 8px;border-radius:999px;background:#1e2f4d}.tag.focus{background:#14532d;color:#bbf7d0}.tag.pressure{background:#4c1d95;color:#e9d5ff}
-a{color:var(--blue);text-decoration:none;font-size:12.5px}
-@media(max-width:900px){.layout{grid-template-columns:1fr}.charts{grid-template-columns:1fr}.filters{position:static}}
-</style></head><body>
-<header><h1>Veille écologie & biodiversité</h1><p class="sub">Articles scientifiques récents classés par taxon, zone, thématique et pression sur la biodiversité.</p></header>
-<div class="layout"><aside class="filters">
-<h3>Recherche</h3><input id="q" type="search" placeholder="Titre, auteur, mot-clé…">
-<h3>Taxon</h3><select id="taxon"><option value="">Tous</option></select>
-<h3>Zone géographique</h3><select id="zone"><option value="">Toutes</option></select>
-<h3>Thématique</h3><select id="theme"><option value="">Toutes</option></select>
-<h3>Revue</h3><select id="revue"><option value="">Toutes</option></select>
-<h3>Année</h3><select id="annee"><option value="">Toutes</option></select>
-<h3>Focus biodiversité</h3><div id="focuses"></div>
-<button onclick="reset()">Réinitialiser</button></aside>
-<main><div class="kpis" id="kpis"></div>
-<div class="charts">
-<div class="card"><h2>Articles par pression</h2><canvas id="chartPressure"></canvas></div>
-<div class="card"><h2>Tendance par année</h2><canvas id="chartYear"></canvas></div>
-<div class="card"><h2>Grandes zones</h2><canvas id="chartZone"></canvas></div>
-<div class="card"><h2>Taxons</h2><canvas id="chartTaxon"></canvas></div></div>
-<h2 style="font-size:16px">Articles filtrés <span id="count"></span></h2>
-<div class="results" id="results"></div></main></div>
+<html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Veille écologie et biodiversité</title>
+<style>body{margin:0;background:#0f172a;color:#e8eef8;font:16px system-ui}header,main{padding:24px;max-width:1300px;margin:auto}h1{margin:0}p{line-height:1.5}#filters{display:flex;flex-wrap:wrap;gap:12px}label{display:grid;gap:5px}select,input,button{padding:10px;border-radius:6px;border:1px solid #456;background:#17243b;color:white}#charts,#results{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:20px}article,section.chart{padding:18px;background:#17243b;border-radius:10px;overflow-wrap:anywhere}h2{font-size:19px}h3{font-size:16px}a{color:#93c5fd}.meta,small{color:#c0cce0}.bar{display:block;background:#38bdf8;height:10px;margin:5px 0 12px;border-radius:4px}#status{padding:12px;border:1px solid #456;white-space:pre-wrap}button{cursor:pointer}</style>
+<header><h1>Veille écologie et biodiversité</h1><p>Articles scientifiques par taxon, zone géographique et pression sur la biodiversité.</p><small>Version corrective 2026-11-12-B · Fréquences du corpus, pas tendances de la biodiversité.</small></header>
+<main><p id="status" role="status">Chargement des articles…</p><div id="filters"><label>Recherche<input id="q" type="search" placeholder="Titre, auteur, résumé"></label></div><div id="charts"></div><h2>Articles filtrés</h2><div id="results"></div></main>
 <script>
+'use strict';
 let DATA=[];
-const colors=['#60a5fa','#4ade80','#fbbf24','#f87171','#c084fc','#38bdf8','#fb923c','#a3e635'];
-const uniq=a=>[...new Set(a)].sort((x,y)=>x.localeCompare(y,'fr'));
-function fill(id,key){const s=document.getElementById(id);uniq(DATA.flatMap(d=>d[key])).forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=v;s.appendChild(o)})}
-function init(){fill('taxon','taxon');fill('zone','zone');fill('theme','themes');fill('revue','revue');fill('annee','annee');
-uniq(DATA.map(d=>d.focus)).forEach(f=>{const l=document.createElement('label');l.className='chk';l.innerHTML=`<input type="checkbox" value="${f}" onchange="render()"> ${f}`;document.getElementById('focuses').appendChild(l)});render()}
-const v=id=>document.getElementById(id).value;
-const cf=()=>[...document.querySelectorAll('#focuses input:checked')].map(i=>i.value);
-function filtered(){const q=v('q').toLowerCase(),t=v('taxon'),z=v('zone'),th=v('theme'),r=v('revue'),a=v('annee'),fs=cf();
-return DATA.filter(d=>(!q||(d.titre+d.auteurs+d.resume+d.revue).toLowerCase().includes(q))&&(!t||d.taxon.includes(t))&&(!z||d.zone.includes(z))&&(!th||d.themes.includes(th))&&(!r||d.revue===r)&&(!a||String(d.annee)===a)&&(!fs.length||fs.includes(d.focus)))}
-function countBy(items,key){const m={};items.forEach(d=>(Array.isArray(d[key])?d[key]:[d[key]]).forEach(x=>m[x]=(m[x]||0)+1));return Object.entries(m).sort((a,b)=>b[1]-a[1])}
-function bar(canvas,entries){const c=canvas.getContext('2d');const w=canvas.width=canvas.clientWidth*2,h=canvas.height=460;c.clearRect(0,0,w,h);
-const max=Math.max(...entries.map(e=>e[1]),1),pad=14,bw=(w-pad*2)/Math.max(entries.length,1);
-entries.forEach((e,i)=>{const bh=(h-70)*e[1]/max,x=pad+i*bw,y=h-45-bh;c.fillStyle=colors[i%colors.length];c.fillRect(x+6,y,bw-12,bh);
-c.fillStyle='#9fb0c8';c.font='22px Arial';c.textAlign='center';c.fillText(e[1],x+bw/2,y-8);
-c.save();c.translate(x+bw/2,h-18);c.rotate(-.42);c.fillStyle='#e8eef8';c.font='20px Arial';c.textAlign='right';c.fillText(e[0].length>26?e[0].slice(0,25)+'…':e[0],0,0);c.restore()})}
-function render(){const f=filtered();document.getElementById('count').textContent=`(${f.length})`;
-document.getElementById('kpis').innerHTML=[['Articles',f.length],['Revues',uniq(f.map(d=>d.revue)).length],['Taxons',uniq(f.flatMap(d=>d.taxon)).length],['Zones',uniq(f.flatMap(d=>d.zone)).length]].map(k=>`<div class="kpi"><b>${k[1]}</b><span>${k[0]}</span></div>`).join('');
-bar(document.getElementById('chartPressure'),countBy(f,'pression'));
-const y={};f.forEach(d=>y[d.annee]=(y[d.annee]||0)+1);bar(document.getElementById('chartYear'),Object.entries(y).sort());
-bar(document.getElementById('chartZone'),countBy(f,'zone').slice(0,8));bar(document.getElementById('chartTaxon'),countBy(f,'taxon').slice(0,8));
-document.getElementById('results').innerHTML=f.map(d=>`<article class="article"><h4>${d.titre}</h4><div class="meta">${d.auteurs} · <b>${d.revue}</b> · ${d.annee} · DOI ${d.doi}</div><p class="resume">${d.resume}</p><div class="tags"><span class="tag focus">Focus : ${d.focus}</span><span class="tag pressure">${d.pression}</span>${d.themes.map(t=>`<span class="tag">${t}</span>`).join('')}${d.taxon.map(t=>`<span class="tag">${t}</span>`).join('')}${d.zone.map(t=>`<span class="tag">${t}</span>`).join('')}</div><p><a href="${d.url}" target="_blank" rel="noopener">Ouvrir l’article ↗</a></p></article>`).join('')||'<p style="color:var(--muted)">Aucun article ne correspond aux filtres.</p>'}
-function reset(){['q','taxon','zone','theme','revue','annee'].forEach(id=>document.getElementById(id).value='');document.querySelectorAll('#focuses input').forEach(i=>i.checked=false);render()}
-['q','taxon','zone','theme','revue','annee'].forEach(id=>document.getElementById(id).addEventListener('input',render));
-fetch('data/articles.json').then(r=>r.json()).then(d=>{DATA=d;init()}).catch(()=>alert('Impossible de charger data/articles.json'));
-window.addEventListener('resize',render);
-</script></body></html>
+const fields=[['taxon','Taxon'],['zone','Zone géographique'],['themes','Thématique'],['revue','Revue'],['annee','Année'],['focus','Focus biodiversité']];
+const el=id=>document.getElementById(id);
+const escapeHTML=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const list=x=>Array.isArray(x)?x:(x==null?[]:[x]);
+function init(){
+ for(const [key,label] of fields){const box=document.createElement('label');box.textContent=label;const s=document.createElement('select');s.id=key;s.add(new Option('Tous',''));const values=[...new Set(DATA.flatMap(d=>list(d[key]).map(String)))];values.sort((a,b)=>key==='annee'?Number(b)-Number(a):a.localeCompare(b,'fr'));for(const v of values)s.add(new Option(v,v));s.onchange=render;box.append(s);el('filters').append(box);}
+ el('q').oninput=render;const b=document.createElement('button');b.textContent='Réinitialiser';b.onclick=()=>{el('q').value='';fields.forEach(([k])=>el(k).value='');render();};el('filters').append(b);render();
+}
+function histogram(data,key,title){
+ const counts=new Map();for(const d of data)for(const x of new Set(list(d[key]).map(String)))counts.set(x,(counts.get(x)||0)+1);
+ const entries=[...counts].sort((a,b)=>key==='annee'?Number(a[0])-Number(b[0]):b[1]-a[1]);const max=Math.max(1,...entries.map(x=>x[1]));
+ return '<section class="chart"><h2>'+escapeHTML(title)+'</h2>'+entries.map(([k,n])=>'<div>'+escapeHTML(k)+' : '+n+'<span class="bar" style="width:'+100*n/max+'%"></span></div>').join('')+(entries.length?'':'Aucune donnée')+'</section>';
+}
+function render(){
+ const q=el('q').value.toLocaleLowerCase('fr');const data=DATA.filter(d=>(!q||[d.titre,d.auteurs,d.resume,d.revue].join(' ').toLocaleLowerCase('fr').includes(q))&&fields.every(([k])=>!el(k).value||list(d[k]).map(String).includes(el(k).value)));
+ el('status').textContent=data.length+' article(s) affiché(s) sur '+DATA.length+' · '+new Set(data.map(d=>d.revue)).size+' revue(s).';
+ el('charts').innerHTML=histogram(data,'pression','Articles par pression')+histogram(data,'annee','Publications par année')+histogram(data,'zone','Répartition géographique')+histogram(data,'taxon','Répartition par taxon');
+ el('results').innerHTML=data.map(d=>{const raw=d.url||(d.doi?'https://doi.org/'+d.doi:'');let url='';try{const u=new URL(raw);if(['https:','http:'].includes(u.protocol))url=u.href;}catch{}return '<article><h3>'+escapeHTML(d.titre)+'</h3><p class="meta">'+escapeHTML(d.auteurs)+' · '+escapeHTML(d.revue)+' · '+escapeHTML(d.annee)+'</p><p>'+escapeHTML(d.resume||'Résumé non renseigné.')+'</p><p><small>'+escapeHTML([...list(d.focus),...list(d.themes),...list(d.taxon),...list(d.zone)].join(' · '))+'</small></p>'+(url?'<a href="'+escapeHTML(url)+'" target="_blank" rel="noopener noreferrer">Ouvrir la source</a>':'')+'</article>';}).join('')||'<p>Aucun article ne correspond aux filtres.</p>';
+}
+async function load(){
+ const errors=[];for(const path of ['./articles.json','./data/articles.json']){try{const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const data=await r.json();if(!Array.isArray(data))throw new Error('Le JSON doit être une liste');DATA=data;break;}catch(e){errors.push(path+' : '+e.message);}}
+ if(errors.length===2){el('status').textContent='Échec du chargement des données :\n'+errors.join('\n');return;}
+ try{init();}catch(e){console.error(e);el('status').textContent='Données chargées, mais erreur d’affichage : '+e.message;}
+}
+load();
+</script></html>
